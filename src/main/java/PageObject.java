@@ -17,5 +17,6 @@ public class PageObject extends BaseClass{
         System.out.println(pageObject.getCourseTitle());
         System.out.println(pageObject.getCourseRate());
         System.out.println(pageObject.getCourseDescription());
+        System.out.println(pageObject.getCourseGoals());
     }
 }

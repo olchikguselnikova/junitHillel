@@ -8,8 +8,11 @@ public class Lesson15_PageObject {
     @FindBy(xpath = "//span[contains(@class,\"course-rating_average\")]")
     WebElement courseRate;
 
-    @FindBy(xpath = "//div[contains(@class,\"introduction_info introduction-info\")]")
+    @FindBy(xpath = "//*[contains(@class,\"introduction_info introduction-info\")]//child::p")
     WebElement courseDescription;
+
+    @FindBy(xpath = "//div[contains(@class,\"introduction-info-redactor_section\")]")
+    WebElement courseGoals;
 
     public String getCourseTitle(){
         return courseTitle.getText();
@@ -20,4 +23,8 @@ public class Lesson15_PageObject {
     public String getCourseDescription(){
         return courseDescription.getText();
     }
+    public String getCourseGoals(){
+        return courseGoals.getText();
+    }
 }
+
